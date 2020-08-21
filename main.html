@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>C:\Users\FAMILY PC\Documents\codeBase\edx_oop\main.cpp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="Code::Blocks Exporter plugin" />
+<style type="text/css">
+<!--
+body { color: #FFFFFF; background-color: #22282A; }
+.style11 { color: #FFFFFF; background-color: #22282A; }
+.style64 { color: #C8C8C8; }
+.style72 { color: #C8C8C8; }
+.style75 { color: #C8C8C8; }
+.style1 { color: #75715E; font-style: italic; }
+.style23 { color: #75715E; font-style: italic; }
+.style65 { color: #75715E; font-style: italic; }
+.style87 { color: #75715E; font-style: italic; }
+.style2 { color: #75715E; font-style: italic; }
+.style66 { color: #75715E; font-style: italic; }
+.style3 { color: #75715E; font-weight: bold; font-style: italic; }
+.style24 { color: #75715E; font-weight: bold; font-style: italic; }
+.style67 { color: #75715E; font-weight: bold; font-style: italic; }
+.style88 { color: #75715E; font-weight: bold; font-style: italic; }
+.style15 { color: #75715E; font-weight: bold; font-style: italic; }
+.style79 { color: #75715E; font-weight: bold; font-style: italic; }
+.style17 { color: #80FF80; }
+.style81 { color: #80FF80; }
+.style18 { color: #FF8080; }
+.style82 { color: #FF8080; }
+.style4 { color: #FF8080; }
+.style68 { color: #F0C8F0; }
+.style5 { color: #26F9AD; font-style: italic; }
+.style69 { color: #8787C8; font-weight: bold; }
+.style16 { color: #F92672; font-style: italic; }
+.style80 { color: #9AC89A; font-weight: bold; }
+.style19 { color: #BE00BE; font-weight: bold; }
+.style83 { color: #BE89BE; font-weight: bold; }
+.style6 { color: #E0A000; }
+.style12 { color: #E0A000; }
+.style20 { color: #E0A000; }
+.style70 { color: #BEBEFF; }
+.style76 { color: #BEBEFF; }
+.style7 { color: #E0A000; }
+.style71 { color: #E0CE9F; }
+.style8 { color: #000000; }
+.style9 { color: #F92672; }
+.style73 { color: #84A084; }
+.style10 { color: #A6E22E; }
+.style74 { color: #FFC8C8; }
+.style34 { color: #000000; background-color: #80FFFF; font-weight: bold; }
+.style35 { color: #FFFFFF; background-color: #FF0000; font-weight: bold; }
+.style50 { color: #404080; font-style: italic; }
+.style114 { color: #8585AC; font-style: italic; }
+--></style></head>
+<body>
+<pre>
+<code><span style="font: 10pt Courier New;"><span class="style2">//Program to simulate shoot money code.
+//Author: Samuel Brifo
+//Date:20th August 2020
+</span><span class="style9">#include &lt;iostream&gt;
+
+</span><span class="style5">using namespace </span><span class="style16">std</span><span class="style10">;
+
+</span><span class="style2">//Have a wallet.
+</span><span class="style5">class </span><span class="style11">Wallet
+</span><span class="style10">{
+</span><span class="style5">private</span><span class="style10">:
+    </span><span class="style5">double </span><span class="style11">amount</span><span class="style10">; </span><span class="style2">//amount in wallet.
+</span><span class="style5">public</span><span class="style10">:
+    </span><span class="style11">Wallet</span><span class="style10">(</span><span class="style5">double </span><span class="style11">x</span><span class="style10">):</span><span class="style11">amount</span><span class="style10">(</span><span class="style11">x</span><span class="style10">){ </span><span class="style2">// load wallet.
+    </span><span class="style16">cout </span><span class="style10">&lt;&lt;</span><span class="style6">"Wallet has been loaded"</span><span class="style10">&lt;&lt;</span><span class="style16">endl</span><span class="style10">;
+    }
+    </span><span class="style11">Wallet</span><span class="style10">(){
+        </span><span class="style16">cout </span><span class="style10">&lt;&lt;</span><span class="style6">"Wallet has been created."</span><span class="style10">;
+    }
+  </span><span class="style2">//mutators
+  </span><span class="style5">friend double </span><span class="style11">shootAmount</span><span class="style10">(</span><span class="style5">double </span><span class="style11">amountShot</span><span class="style10">,  </span><span class="style11">Wallet</span><span class="style10">&amp; </span><span class="style11">w</span><span class="style10">);
+
+};
+
+</span><span class="style2">//shoot amount
+</span><span class="style5">double </span><span class="style11">shootAmount</span><span class="style10">(</span><span class="style5">double </span><span class="style11">amountShot</span><span class="style10">, </span><span class="style11">Wallet</span><span class="style10">&amp; </span><span class="style11">w</span><span class="style10">)
+{
+    </span><span class="style2">//Wallet w; //
+    </span><span class="style5">if</span><span class="style10">(</span><span class="style11">amountShot </span><span class="style10">&gt; </span><span class="style11">w</span><span class="style10">.</span><span class="style11">amount</span><span class="style10">) </span><span class="style2">// prompt insufficient amount
+        </span><span class="style10">{</span><span class="style16">cout </span><span class="style10">&lt;&lt;</span><span class="style6">"wallet amount is at insufficient:"</span><span class="style10">; </span><span class="style5">return </span><span class="style11">w</span><span class="style10">.</span><span class="style11">amount</span><span class="style10">;}
+    </span><span class="style5">else
+      </span><span class="style10">{
+       </span><span class="style11">w</span><span class="style10">.</span><span class="style11">amount </span><span class="style10">-= </span><span class="style11">amountShot</span><span class="style10">; </span><span class="style2">// keep the balance.
+       </span><span class="style16">cout </span><span class="style10">&lt;&lt;</span><span class="style6">"money has been shot!"</span><span class="style10">&lt;&lt;</span><span class="style16">endl</span><span class="style10">;
+       </span><span class="style16">cout </span><span class="style10">&lt;&lt;</span><span class="style6">"Balance in wallet is:"</span><span class="style10">&lt;&lt;</span><span class="style11">w</span><span class="style10">.</span><span class="style11">amount</span><span class="style10">&lt;&lt;</span><span class="style16">endl</span><span class="style10">;
+         </span><span class="style2">// shoot amount
+         </span><span class="style5">return </span><span class="style11">amountShot</span><span class="style10">;
+       }
+
+}
+
+</span><span class="style2">//deposit amount
+</span><span class="style5">void </span><span class="style11">depositAmount</span><span class="style10">(</span><span class="style5">double </span><span class="style11">getShotAmount</span><span class="style10">)
+{
+
+
+}
+
+</span><span class="style2">//have a month
+</span><span class="style5">class </span><span class="style11">Month
+</span><span class="style10">{
+</span><span class="style5">private</span><span class="style10">:
+    </span><span class="style16">string </span><span class="style11">certainCondition</span><span class="style10">; </span><span class="style2">//a month has a certain condition
+    </span><span class="style5">short </span><span class="style11">day</span><span class="style10">; </span><span class="style2">//day of month
+    </span><span class="style5">short </span><span class="style11">month</span><span class="style10">; </span><span class="style2">//month
+    </span><span class="style5">short </span><span class="style11">year</span><span class="style10">; </span><span class="style2">//year  for shot.
+    </span><span class="style5">double </span><span class="style11">amountShotReceived</span><span class="style10">; </span><span class="style2">// receive the amount shot
+</span><span class="style5">public</span><span class="style10">:
+    </span><span class="style11">Month</span><span class="style10">(</span><span class="style5">short </span><span class="style11">day</span><span class="style10">, </span><span class="style5">short </span><span class="style11">year</span><span class="style10">):</span><span class="style5">this</span><span class="style10">.</span><span class="style11">day</span><span class="style10">(</span><span class="style11">day</span><span class="style10">),</span><span class="style5">this</span><span class="style10">.</span><span class="style11">year</span><span class="style10">(</span><span class="style11">year</span><span class="style10">)
+    {
+        </span><span class="style16">cout </span><span class="style10">&lt;&lt;</span><span class="style6">"Day:"</span><span class="style10">&lt;&lt;</span><span class="style11">day</span><span class="style10">&lt;&lt;</span><span class="style6">" "</span><span class="style10">&lt;&lt;</span><span class="style6">"Year:"</span><span class="style10">&lt;&lt;</span><span class="style11">year</span><span class="style10">&lt;&lt;</span><span class="style6">" "</span><span class="style10">&lt;&lt;</span><span class="style6">"created"</span><span class="style10">&lt;&lt;</span><span class="style16">endl</span><span class="style10">;
+    }
+
+   </span><span class="style2">// mutators
+    </span><span class="style5">void </span><span class="style11">whichCertainCondition</span><span class="style10">(</span><span class="style11">scc</span><span class="style10">){
+        </span><span class="style5">this</span><span class="style10">.</span><span class="style11">certainCondition </span><span class="style10">= </span><span class="style11">scc</span><span class="style10">;
+    }
+
+    </span><span class="style2">// accessors
+    </span><span class="style5">friend void </span><span class="style11">viewLedger</span><span class="style10">(</span><span class="style5">const </span><span class="style11">Month</span><span class="style10">&amp; </span><span class="style11">m</span><span class="style10">);
+
+};
+
+</span><span class="style5">void </span><span class="style11">viewLedger</span><span class="style10">(</span><span class="style5">const </span><span class="style11">Month</span><span class="style10">&amp; </span><span class="style11">m</span><span class="style10">)
+{
+    </span><span class="style16">cout </span><span class="style10">&lt;&lt;</span><span class="style6">"For:"</span><span class="style10">&lt;&lt;</span><span class="style11">m</span><span class="style10">.</span><span class="style11">certainCondition</span><span class="style10">&lt;&lt;</span><span class="style6">" "</span><span class="style10">&lt;&lt;</span><span class="style6">"Day:"</span><span class="style10">&lt;&lt;</span><span class="style11">m</span><span class="style10">.</span><span class="style11">day</span><span class="style10">&lt;&lt;</span><span class="style6">" "</span><span class="style10">&lt;&lt;</span><span class="style11">m</span><span class="style10">.</span><span class="style11">year
+          </span><span class="style10">&lt;&lt;</span><span class="style6">"Amount shot:$"</span><span class="style10">&lt;&lt;</span><span class="style11">m</span><span class="style10">.</span><span class="style11">amountShotReceived</span><span class="style10">&lt;&lt;
+}
+
+
+
+
+
+</span><span class="style5">int </span><span class="style11">main</span><span class="style10">()
+{
+    </span><span class="style2">//create a wallet.
+    </span><span class="style11">Wallet SamuelWallet</span><span class="style10">(</span><span class="style4">1000</span><span class="style10">); </span><span class="style2">// load with 1000 dollars
+
+    //black friday is around the corner
+     </span><span class="style11">Month November</span><span class="style10">(</span><span class="style4">10</span><span class="style10">,</span><span class="style4">2020</span><span class="style10">);
+     </span><span class="style11">November</span><span class="style10">.</span><span class="style11">whichCertainCondition</span><span class="style10">(</span><span class="style6">"Black Friday."</span><span class="style10">);
+
+    </span><span class="style2">//shoot 100 dollars.
+     </span><span class="style5">double </span><span class="style11">getShotAmount </span><span class="style10">= </span><span class="style4">0</span><span class="style10">; </span><span class="style2">//awating shot amount
+     </span><span class="style11">getShotAmount </span><span class="style10">= </span><span class="style11">shootAmount</span><span class="style10">(</span><span class="style4">10000</span><span class="style10">,</span><span class="style11">SamuelWallet</span><span class="style10">);
+
+     </span><span class="style2">//shot amount booked on that date and year.
+
+
+
+
+
+
+
+    </span><span class="style5">return </span><span class="style4">0</span><span class="style10">;
+}</span></span>
+</code></pre>
+</body>
+</html>
