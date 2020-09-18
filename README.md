@@ -1,3 +1,5 @@
 # ccx
 code snippets of ideas: spanning from finance to others.
-Shoot Money Code.
+
+# The SMVAS.
+Behavioural spending and reducation in financial responsibility perspectively.
